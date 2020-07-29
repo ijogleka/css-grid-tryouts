@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grid Template Areas + Media Queries</title>
+    <style media="screen">
+      .container {
+        background-color: #fff;
+      }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "body"
+          "footer";
+        grid-gap: 10px;
+      }
+      @media only screen and (min-width: 600px) {
+        .container {
+          grid-template-columns: 20% 1fr;
+          grid-template-areas:
+            "...     header"
+            "sidebar body"
+            "sidebar footer";
+        }
+      }
+      .header { grid-area: header; }
+      .sidebar { grid-area: sidebar; }
+      .body { grid-area: body; }
+      .footer { grid-area: footer; }
+    </style>
+  </head>
+  <body>
+    <h3>Grid Template Areas + Media Queries</h3>
+    <div class="container">
+      <div class="box header">Header</div>
+      <div class="box sidebar">Sidebar</div>
+      <div class="box body">Body</div>
+      <div class="box footer">Footer</div>
+    </div>
+    <ul>
+      <li>Placing grid cells via named template areas</li>
+      <li>Visually displaying blank cells without any DOM elements</li>
+      <li>Using media queries to change the template areas</li>
+      <li>Reference: <a href="#https://www.w3.org/TR/css-grid-1/#propdef-grid-template-areas">Named Template Areas</a></li>
+    </ul>
+  </body>
+</html>

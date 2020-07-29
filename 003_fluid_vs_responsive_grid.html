@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Grid Layout</title>
+    <style media="screen">
+      .container {
+        background-color: #fff;
+      }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Responsive Grid Layout</h3>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <ul>
+      <li>Using repeat + auto-fit + minmax for Responsive design</li>
+      <li>Reference: <a href="https://www.w3.org/TR/css-grid-1/#funcdef-repeat">repeat()</a></li>
+      <li>Reference: <a href="https://www.w3.org/TR/css-grid-1/#valdef-grid-template-columns-minmax">minmax()</a></li>
+      <li>Reference: <a href="https://www.w3.org/TR/css-grid-1/#valdef-repeat-auto-fit">auto-fit</a></li>
+    </ul>
+  </body>
+</html>

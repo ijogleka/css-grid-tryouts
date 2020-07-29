@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Explicit + Auto Placement</title>
+    <style media="screen">
+      .container {
+        background-color: #fff;
+      }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 100px [first-col-line] 100px [second-col-line] 100px;;
+        grid-gap: 10px;
+      }
+      .box1 {
+        grid-column-start: second-col-line;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #888;
+      }
+      .box2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Explicit + Auto Placement</h3>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <ul>
+      <li>Explicitly place cells using line placement props</li>
+      <li>Explicitly place cells using shorthand placement props</li>
+      <li>Rest of the cells get auto placed</li>
+      <li>Reference: <a href="#https://www.w3.org/TR/css-grid-1/#auto-placement-algo">Auto Placement Order</a></li>
+    </ul>
+  </body>
+</html>

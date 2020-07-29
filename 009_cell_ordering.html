@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ordering of grid cells</title>
+    <style media="screen">
+      .container { background-color: #fff; }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-gap: 10px;
+      }
+      .box1 { order: 3; }
+      .box2 { order: 1; }
+      .box3 { order: 2; }
+    </style>
+  </head>
+  <body>
+    <h3>Ordering of grid cells</h3>
+    <div class="container">
+      <div class="box box1"><input placeholder="1"/></div>
+      <div class="box box2"><input placeholder="2"/></div>
+      <div class="box box3"><input placeholder="3"/></div>
+    </div>
+    <ul>
+      <li>Changing the Visual Order does not change Tabbed Order</li>
+      <li>Visual Order not equal to Logical Order</li>
+      <li>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">Accessibility</a></li>
+    </ul>
+  </body>
+</html>

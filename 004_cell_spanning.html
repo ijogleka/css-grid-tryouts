@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Column Spanning</title>
+    <style media="screen">
+      .container {
+        background-color: #fff;
+      }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 10px;
+      }
+      .box1 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+      }
+      .box2 {
+        grid-column: 1/2;
+        grid-row: 2/span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Column Spanning</h3>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <ul>
+      <li>Span Cells across columns/rows using shorthand placement props</li>
+      <li>Span Cells across columns/rows using span prop</li>
+      <li>Reference: <a href="https://www.w3.org/TR/css-grid-1/#common-uses-named-lines">Lines and Spans</a></li>
+    </ul>
+  </body>
+</html>

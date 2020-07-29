@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic grid example</title>
+    <style media="screen">
+      .container {
+        background-color: #fff;
+      }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Basic grid example</h3>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+  </body>
+</html>

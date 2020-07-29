@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Box Overlap</title>
+    <style media="screen">
+      .container { background-color: #fff; }
+      .box {
+        background-color: #ddd;
+        padding: 20px;
+        font-size: 150%;
+        color: blue;
+      }
+      .box1 { opacity: 0.6; }
+      .box2 { background-color: #888; }
+
+      /* Grid Configurations Below */
+      .container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-gap: 10px;
+      }
+      .box1 {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        z-index: 1;
+      }
+      .box2 {
+        grid-column: 3/5;
+        grid-row: 2/span 2;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Box Overlap</h3>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <ul>
+      <li>Explicitly overlap cell content</li>
+      <li>Reference: <a href="https://www.w3.org/TR/css-grid-1/#z-order">z-index overlapping</a></li>
+    </ul>
+  </body>
+</html>
